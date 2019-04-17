@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project name="dv-language-pack" basedir="." default="default">
+<target name="en">
+	<taskdef classpath="lib/rscbundlecheck-bin.jar" resource="task.properties"/>
+	<resourceCheck>
+		<fileset dir="en-US">
+			<include name="*.properties"/>
+		</fileset>
+		<checks>
+			<include name="duplicate key check"/>
+		</checks>
+	</resourceCheck>
+</target>
+<target name="fr">
+        <taskdef classpath="lib/rscbundlecheck-bin.jar" resource="task.properties"/>
+        <resourceCheck>
+                <fileset dir="fr-CA">
+                        <include name="*.properties"/>
+                </fileset>
+                <checks>
+                        <include name="duplicate key check"/>
+                </checks>
+        </resourceCheck>
+</target>
+</project>
